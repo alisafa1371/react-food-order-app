@@ -1,0 +1,21 @@
+.meals-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  padding: 1rem;
+}
+.item-info,
+.item-quantity {
+  display: flex;
+  flex-direction: column;
+}
+.item-description {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.item-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ad5502;
+}

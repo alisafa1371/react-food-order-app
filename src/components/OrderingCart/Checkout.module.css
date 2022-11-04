@@ -1,0 +1,59 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.6rem;
+}
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.form label {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.input {
+  width: 70%;
+  padding: 0.5rem 1rem;
+  font: inherit;
+  font-size: 1.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.invalid {
+  background-color: rgb(250, 172, 172);
+  border: 1px solid #b40e0e;
+}
+
+.checkout-btns {
+  margin-top: 1rem;
+  align-self: flex-end;
+  display: flex;
+  gap: 1rem;
+}
+
+.close-btn {
+  background: none;
+  color: #8a2b06;
+  margin-right: 1rem;
+}
+.close-btn:hover,
+.close-btn:active {
+  color: #fff;
+}
+
+.error {
+  position: absolute;
+  top: 4rem;
+  left: 40%;
+  font-size: 1.4rem;
+  color: red;
+}
+
+.password-error {
+  width: 100%;
+  left: 0;
+  font-size: 1.2rem;
+}

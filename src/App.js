@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Header from "./components/Layout/Header/Header";
+import Banner from "./components/Layout/Banner/Banner";
+import Meals from "./components/Meals/Meals";
+import OrderingCart from "./components/OrderingCart/OrderingCart";
+import CartProvider from "./store/cart-provider";
 
 function App() {
+  const [checkOrder, setCheckOrder] = useState(false);
+  const showOrderHandler = () => {
+    setCheckOrder(true);
+  };
+  const hideOrderHandler = () => {
+    setCheckOrder(false);
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <CartProvider>
+      {checkOrder && <OrderingCart onCancel={hideOrderHandler} />}
+      <Header onCheck={showOrderHandler} />
+      <Banner />
+      <main>
+        <Meals />
+      </main>
+    </CartProvider>
   );
 }
 

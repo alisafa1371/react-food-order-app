@@ -1,0 +1,48 @@
+.cart-btn {
+  background: rgba(67, 12, 12, 0.499);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 0.6rem 2rem;
+  border-radius: 1.5rem;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: none;
+  color: inherit;
+}
+.cart-btn:hover,
+.cart-btn.active {
+  background: #2c0d00;
+}
+.cart-btn__quantity {
+  background-color: #b94517;
+  padding: 0.6rem 1.2rem;
+  border-radius: 2rem;
+}
+.cart-btn:hover .cart-btn__quantity,
+.cart-btn.active .cart-btn__quantity {
+  background: #92320c;
+}
+
+.bump {
+  animation: bump 300ms ease-out;
+}
+
+@keyframes bump {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
